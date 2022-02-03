@@ -32,6 +32,7 @@ namespace project_09_array
             //1-100 arasında rasgele sayi üretsin
             //kullanıcıdan bu sayiyi tahmin etmesini isteyelim bilirse tebrik bilemesse kaybettin
             //1. tahminde bilinirse  sırayla : 50 - 40 - 30 -20 -10
+            // kullanıcıdan oyunu tekrar oynayıp oynmak istemediği sorulacak
             Random rnd = new Random();
             int deskopNumber = 0;
             int sayac = 1;
