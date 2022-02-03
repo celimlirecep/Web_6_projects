@@ -109,23 +109,7 @@ namespace proje_08_For
 
               }
               Console.WriteLine("en büyük sayiniz: " +bigNUmber);*/
-            int sayac = 1;
-            int bigNumber = 0;
-            while (sayac!=3)
-            {
-                Console.Write(sayac+" sayiniz:  ");
-                sayac++;
-                int userName=int.Parse(Console.ReadLine());
-                Random rastgele = new Random();
-                int rasgeleNumber = rastgele.Next(1,100);
-                if (bigNumber<rasgeleNumber)
-                {
-                    bigNumber = rasgeleNumber;
-                }
-
-
-            }
-            Console.WriteLine("girilen sayilardan en buyugu: " + bigNumber);
+            
 
 
 
