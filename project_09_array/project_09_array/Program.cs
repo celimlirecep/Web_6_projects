@@ -33,6 +33,7 @@ namespace project_09_array
             //kullanıcıdan bu sayiyi tahmin etmesini isteyelim bilirse tebrik bilemesse kaybettin
             //1. tahminde bilinirse  sırayla : 50 - 40 - 30 -20 -10
             // kullanıcıdan oyunu tekrar oynayıp oynmak istemediği sorulacak
+            
             Random rnd = new Random();
             int deskopNumber = 0;
             int sayac = 1;
@@ -40,40 +41,49 @@ namespace project_09_array
 
             int[] deskopEstimate = new int[5];
             int userNumber = 0;
+            string oyunSonu = "";
+
             do
             {
-                 deskopNumber = rnd.Next(1, 10);
-                Console.WriteLine(deskopNumber);
-                deskopEstimate[sayac-1] = deskopNumber;
-                Console.Write("please enter your number (Between 1 and 10) :   ");
-                 userNumber = int.Parse(Console.ReadLine());
-                  yourEstimate[sayac-1] = userNumber;
-                
-                if (userNumber == deskopNumber)
+                do
                 {
-                    Console.WriteLine("HELAL OLSUN DAYI OGLI!!!");
-                    break;
-                }
-                else
+                    deskopNumber = rnd.Next(1, 10);
+                    Console.WriteLine(deskopNumber);
+                    deskopEstimate[sayac - 1] = deskopNumber;
+                    Console.Write("please enter your number (Between 1 and 10) :   ");
+                    userNumber = int.Parse(Console.ReadLine());
+                    yourEstimate[sayac - 1] = userNumber;
+
+                    if (userNumber == deskopNumber)
+                    {
+                        Console.WriteLine("HELAL OLSUN DAYI OGLI!!!");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"BIDAHA DENE DAYI OGLI [KALAN DENEME SAYIN:    {5 - sayac} ");
+                    }
+                    sayac++;
+                    Console.ReadLine();
+                    Console.Clear();
+                } while (sayac != 6);
+                Console.Write("your estimate   :");
+                foreach (var item in yourEstimate)
                 {
-                    Console.WriteLine($"BIDAHA DENE DAYI OGLI [KALAN DENEME SAYIN:    {5 - sayac} ");
+                    Console.Write(" " + item);
                 }
-                sayac++;
-                Console.ReadLine();
-                Console.Clear();
-            } while (sayac != 6);
-            Console.Write("your estimate   :");
-            foreach (var item in yourEstimate)
-            {
-                Console.Write(" "+item);
-            }
-            Console.Write("\ndeskop estimate: ");
-            foreach (var item in deskopEstimate)
-            {
-                Console.Write(" " + item);
-            }
-            
+                Console.Write("\ndeskop estimate: ");
+                foreach (var item in deskopEstimate)
+                {
+                    Console.Write(" " + item);
+                }
+
                 Console.WriteLine($"\nyour score = {(6 - sayac) * 10} ");
+                Console.WriteLine("oyunu tekrar oynamak istiyorsaniz evet yazin yoksa hayir yazin entera basin: ");
+                oyunSonu= Console.ReadLine();
+
+            } while (oyunSonu=="evet");
+           
             
            
 

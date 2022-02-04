@@ -109,8 +109,10 @@ namespace proje_08_For
 
               }
               Console.WriteLine("en büyük sayiniz: " +bigNUmber);*/
-            
 
+            int a = 5;
+            a =+ 5;
+            Console.WriteLine(a);
 
 
             Console.ReadLine();
