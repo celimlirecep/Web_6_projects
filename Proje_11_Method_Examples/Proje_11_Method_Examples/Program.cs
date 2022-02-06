@@ -33,15 +33,16 @@ namespace Proje_11_Method_Examples
             }
             void karsilastirma(int sayac1)
             {
-                if (userEstimate!=deskopEstimate && sayac1<=4)
+                if (userEstimate!=deskopEstimate && sayac1<=3)
                 {
                     Console.WriteLine($"your estimate is wrong/ your remaining right: {4-sayac1}" );
                     sayac++;
                 }
-                else if (userEstimate != deskopEstimate && sayac1>4)
+                else if (userEstimate != deskopEstimate && sayac1>3)
                 {
                     Console.WriteLine($"your all of estimate is wrong/ your remaining right: {4-sayac1}");
-                    //sayac = 6;
+                    sayac = 6;
+                    Console.WriteLine("fonksiyonnn else if -------------------------------:   " + sayac);
                 }
                 else
                 {
@@ -49,10 +50,10 @@ namespace Proje_11_Method_Examples
                     sayac++;
                 }
 
-                  if (sayac==5)
+                /*  if (sayac==5)
                   {
                       sayac = 6;
-                  }
+                  }*/
                   
                 Console.WriteLine("fonksiyonnn -------------------------------:   "+sayac);
             }
